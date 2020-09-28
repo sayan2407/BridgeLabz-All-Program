@@ -1,0 +1,49 @@
+1)How OOP hides the underlying complexity of data 
+Ans :
+
+hides the underlying complexity of data as part of the OOP methodology,in which a program 
+is segregrated into objects with specific data and functions.This technique enhances a
+programmer's ability to create classes with unique data sets and functions,
+avoiding unnecessary penetration from other program classes.
+Data hiding also reduces system complexity for increased robustness by limiting 
+interdependencies between software componenets.
+
+2)Why OOP helps to avoid repetitive code
+ans:
+OOP helps to avoid repetitive code because :
+(i)OOP is faster and easier to execute.
+(ii)OOP provides a clear structure for the programs.
+(iii)OOP helps to keep the Java code DRY "Don't Repeat Yourself",
+ and makes the code easier to maintain, modify and debug.
+(iv)OOP makes it possible to create full reusable applications 
+ with less code and shorter development time.
+The "Don't Repeat Yourself" (DRY) principle is about reducing the repetition of code. 
+You should extract out the codes that are common for the application, 
+and place them at a single place and reuse them instead of repeating it.
+
+3) OOP presents only the signature of internal functionality 
+ans:
+Presents only the signature of internal functionality Gives flexibility to 
+programmers to change the implementation of the abstract behaviour partial
+abstraction(0-100%) can be achieved with abstract classes.
+
+4)Gives flexibility to programmers to change the implementation of the 
+  abstract behaviour-Explain?
+ans: We are create abstraction class for future purpose i.e we can
+change only implementation code no need to change abstract code in future.
+we can change out implementation code as need without changing abstract class code.
+
+5)Answer in single word - Multiple Inheritance can be implemented using
+ans : interface
+
+6)Answer in single word - Partial abstraction (0-100%) can be achieved with
+ans:   abstract classes
+
+7)Total abstraction (100%) can be achieved with
+ans:   interfaces
+
+8)____ Relationship is Static in nature
+ans:    abstract class
+
+9)_____ Relationship is Dynamic in nature 
+ans :    interface
