@@ -101,16 +101,16 @@ do
     read -p "Enter your PIN code : " pin
     checkPin $pin ;;
   5)
-   read -p "Enter your password : " pass1
+   read -p "Enter your password : " s
  #  checkStrong $pass ;;
    
-  path5="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$" #BEST REGEx For Strong Password Match
+ # path5="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$" #BEST REGEx For Strong Password Match
 
-  if [[ $pass1 =~ $path5 ]]
+  if [[ ${#s} -ge 8 && "$s" == *[[:lower:]]* && "$s" == *[[:upper:]]* && "$s" == *[0-9]* ]]
  then
-  echo " $pass is strong"
+  echo " $s is strong"
  else
-  echo "$Pass is not strong"
+  echo "$s is not strong"
  fi
  echo "" ;;
 
