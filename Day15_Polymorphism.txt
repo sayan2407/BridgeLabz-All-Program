@@ -1,0 +1,33 @@
+1)Method Overloading is _________ Polymorphism
+
+ans:   compile time 
+
+2)Method Overriding is _________ Polymorphism
+
+ans:  Run time 
+
+3)Explain Static Polymorphism
+
+ans:
+ (i)Static polymorphism happens in the same class.
+ (ii)Object assignment is not required for static polymorphism.
+ (iii)Static Polymorphism decides which method to execute during compile time.
+ (iv)Method Overloading is an example of static polymorphism, 
+     and it is requred to happens static polymorphism.  
+
+4)Explain Dynamic Polymorphism
+
+ans:
+ Dynamic polymorphism is a process in which a call to an overridden method 
+ is resolved at runtime, thats why it is called runtime polymorphism. 
+
+5)Polymorphism makes it possible to use same Entity in different forms 
+  – Explain why???? 
+ans:
+
+Polymorphism can take two forms: method overloading and method overriding.
+Method overriding occurs when the child class overrides a 
+method of its parent.
+So,Polymorphism allows you to implement multiple methods within 
+the different class that use the same name but a different 
+set of parameters.
