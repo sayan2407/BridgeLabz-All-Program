@@ -2,7 +2,7 @@
 
 function checkName()
 {
- path="(^[a-zA-Z]{3,}$)"
+ path="^[A-Z]{1}[a-z]{2,}$"
  name=$1
  if [[ $name =~ $path ]]
  then
