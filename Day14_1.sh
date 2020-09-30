@@ -129,7 +129,7 @@ do
   7)
    read -p "Enter your email : " email
    path="^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$"
-   path1="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$"
+   path1="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
    if [[ $email =~ $path1 ]]
    then
     echo "$email is valid"
