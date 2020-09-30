@@ -14,8 +14,8 @@ function checkName()
 }
 function checkPhone()
 {
- pat="^(\+91)\\s{0,1}[6-9]{1}[0-9]{9}$"
- path="(0/91)?\\s?[6-9][0-9]{9}"
+ pat="^[+]{0,1}[91]{2}\s{0,1}[6-9]{1}[0-9]{9}$"
+# path="(0/91)?\\s?[6-9][0-9]{9}"
  #Begin with 0 or 91
  phone=$1
  if [[ $phone =~ $pat ]]
