@@ -1,0 +1,49 @@
+1)A class (child class) can extend another class (parent class) by 
+inheriting its features using ___________ *
+
+ans:
+
+Inheritance by extend keyword.
+
+2)Explain -- how Inheritance Implements the DRY (Don’t Repeat Yourself) 
+  programming principle.
+ans :
+  
+Don't repeat yourself (DRY, or sometimes do not repeat yourself) is a
+principle of software development aimed at reducing repetition 
+of software patterns, replacing it with abstractions or 
+using data normalization to avoid redundancy.So,Using Inheritance child
+class can extend parent class i.e inheriting its all features.So, Its
+maintain DRY principle.
+
+3) Explain how Inheritance Improves code reusability
+ans:
+
+Inheritance is a process of defining a new class based on an 
+existing class by extending its common data members and methods. 
+Inheritance allows us to reuse of code, it improves reusability in our
+java application.
+
+4)Explain why Strong Dependency between Child and Parent Class
+
+ans:
+A dependency is a relationship between two or more objects in which 
+an object depends on the other object or objects for its 
+implementation. If one of these objects change, 
+the other object(s) can be impacted.So,In Inheritance also child class
+and parent class has very strong relationship like dependency.If
+parent class will modify then its impact on child class also.So They have 
+very strong Dependency.
+
+5)Is Multi-level Inheritance allowed in Java 
+ans :
+       yes
+
+6)Explain Why Multi-type Inheritance not allowed in Java
+ans:
+
+Consider a case where class B extends class A and Class C and 
+both class A and C have the same method display().
+Now java compiler cannot decide, which display method 
+it should inherit. To prevent such situation,
+ multiple inheritances is not allowed in java.
