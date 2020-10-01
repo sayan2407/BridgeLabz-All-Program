@@ -1,0 +1,74 @@
+1)Establishing a relationship between two unrelated classes,
+  what is this relationship called?
+
+ans :         Association
+
+2)When you declare two fields of different types in a class, 
+  What is this relationship called???
+
+ans :       Association
+
+3)What relationship is narrower kind of association???
+
+ans :     Aggregation
+
+4)Explain - What occurs when there’s a one-way (HAS-A) relationship
+ between the two classes you associate through their objects??
+
+ans :
+
+Aggregation is a narrower kind of association. It occurs when there’s a
+one-way (HAS-A) relationship between the two classes you associate 
+through their objects. For example, every Passenger has a Car but a
+Car doesn’t necessarily have a Passenger. When you declare the 
+Passenger class, you can create a field of the Car type that shows 
+which car the passenger belongs to. Then, when you instantiate a 
+new Passenger object, you can access the data stored in the
+related Car as well
+
+5)What is this Relationship called - When the two classes you
+ associate are mutually dependent on each other and 
+can’t exist without each other
+
+ans:     Composition
+
+6)What is this Relationship called - 
+If one class ceases to exist, the other can’t survive alone
+
+ans :   Composition
+
+7)What is this Relationship called -
+ When Relationship is One-directional 
+
+ans: Association(one to many)
+
+8)What is this Relationship called - 
+The two classes are unrelated, each can exist without the other one 
+
+ans :   Association
+
+9)What is this Relationship called - Two separate classes are 
+associated through their objects. 
+
+ans :    Association
+
+10)What is this Relationship called - 
+Represents a PART-OF relationship between two classes.
+
+ans :   Composition
+
+11)What is this Relationship called - 
+Can be a one-to-one, one-to-many, many-to-one, or 
+many-to-many relationship
+
+ams :   Association
+
+12)What is this Relationship called - 
+  Both classes are dependent on each other
+
+ans :   Composition
+
+13)What is this Relationship called - 
+  Only one class is dependent on the othe
+
+ans : Aggregation
