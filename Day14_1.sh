@@ -106,7 +106,7 @@ do
    
  # path5="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\$%\^&\*]).{8,}$" #BEST REGEx For Strong Password Match
 
-  if [[ ${#s} -ge 8 && "$s" == *[[:lower:]]* && "$s" == *[[:upper:]]* && "$s" == *[0-9]* ]]
+  if [[ ${#s} -ge 8 && "$s" == *[[:lower:]]* && "$s" == *[[:upper:]]* && "$s" == *[0-9]* && "$s" == *[!@\$/^&]* ]]
  then
   echo " $s is strong"
  else
