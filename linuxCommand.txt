@@ -1,0 +1,178 @@
+Q2) Move files from one folder to the respective folders
+#! /usr/bin/bash
+for i in `ls *.txt`
+do
+file=`echo $i |awk -F . '{print $1}'`
+echo $file
+if [ -d $file ]
+then
+rm -R $file
+fi
+mkdir $file
+echo $file "Created"
+mv $i $file/
+echo $i "Move to " $file Directory
+done
+# OUTPUT :
+$ ./assignment1.sh
+abc
+abc Created
+abc.txt Move to  abc Directory
+def
+def Created
+def.txt Move to  def Directory
+ghi
+ghi Created
+ghi.txt Move to  ghi Directory
+
+
+Q3)Append current date to all log files name which has extension .log.1 from a folder
+#! /usr/bin/bash
+echo -e "How many files you want to create : \c"
+read n
+for (( i=1;i<=$n;i++ ))
+do
+ echo -e "Enter filename : \c"
+ read f
+ if [ -f $f ]
+   then
+       rm $f
+   fi
+ touch $f
+  echo $f "Created"
+ fname=`echo $f | awk -F . '{print $1}'`
+ mname=`echo $f | awk -F . '{print $2}'`
+ lname=`echo $f | awk -F . '{print $3}'`
+ echo "Base name is : " $fname
+ echo  "Extension is : " $mname"."$lname
+ date=`date +%d%m%y`
+
+ newfile=$fname-$date.$mname
+ echo $newfile
+ mv $f  $newfile
+ echo $newfile Created
+done
+
+#output:
+$ ./forloop.sh
+How many files you want to create : 5
+Enter filename : abc.log.1
+abc.log.1 Created
+Base name is :  abc
+Extension is :  log.1
+abc-060920.log
+abc-060920.log Created
+Enter filename : def.log.1
+def.log.1 Created
+Base name is :  def
+Extension is :  log.1
+def-060920.log
+def-060920.log Created
+Enter filename : ghi.log.1
+ghi.log.1 Created
+Base name is :  ghi
+Extension is :  log.1
+ghi-060920.log
+ghi-060920.log Created
+Enter filename : jkl.log.1
+jkl.log.1 Created
+Base name is :  jkl
+Extension is :  log.1
+jkl-060920.log
+jkl-060920.log Created
+Enter filename : mno.log.1
+mno.log.1 Created
+Base name is :  mno
+Extension is :  log.1
+mno-060920.log
+mno-060920.log Created
+
+Q4)which have modified 7 days ago & move it to backup folder
+#! /usr/bin/bash
+backup="backup"
+if [ -d $backup ]
+then
+rm -R $backup
+fi
+mkdir $backup
+for i in `find . -mtime +7 -print`
+do
+if [ $i == "" ]
+then
+echo "No File"
+else
+mv $i $backup
+echo $i "move to" $backup
+fi
+done
+echo "Thank you"
+
+
+
+Q)Check if a folder exist or not.If it's not present,create it
+#! /usr/bin/bash
+echo -e "Enter Folder Name : \c"
+read f
+if [ -d $f ]
+then
+  echo "Folder Exist."
+else
+  mkdir $f
+  echo $f "Created"
+fi
+
+Q8)print list of last 10 unique sorted client IP from access.log
+a=>cat access.log
+b=>cat access.log | awk '{print $1}'
+c=>
+#! /usr/bin/bash
+c=1
+for i in `cat access.log | awk '{print $1}' | sort`
+do
+echo $c " => " $i
+c=$(( $c + 1 ))
+done
+echo "Total : " $c
+d=>cat access.log | awk '{print $1}' | sort | uniq -c
+
+
+
+Q9)Check if a folder exists or not. If its not present, crete it
+
+#! /usr/bin/bash
+var="sayan"
+if [ -d $var ] #Check Directory
+then
+echo "Direcory Present"
+else
+mkdir $var  #If directory not present created
+echo $var "Created"
+fi
+// Another Way :
+$ var="sayan" test -d $var && echo "Already Created" || mkdir $var
+Already Created
+
+Q10)Execute command "hello" and "ls" and check its execution status and print wheather command executed successful or not
+
+$ hello
+bash: hello: command not found
+
+$ ls
+ a/                  b/                   checkdir.sh*    sayan/     x/
+ a.txt               b.txt                createdir.sh*   test/      x.txt
+'Already Created'/   checkcreatedir.sh*   deletedir.sh*   test.txt
+
+
+Q11)Set enviroment usersecret
+#! /usr/bin/bash
+
+i=`env | grep username`
+if [ -z $i ]
+then
+export usersecret="dH34xJaa23"
+echo $usersecret
+else
+echo  "<Error>"
+fi
+
+
